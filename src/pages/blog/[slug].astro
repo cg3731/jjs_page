@@ -1,0 +1,21 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  return posts.map((post) => ({ params: { slug: post.slug }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+<MainLayout title={post.data.title} current="/blog">
+  <main class="container section">
+    <article class="card" style="padding: 1.4rem;">
+      <p class="muted">{post.data.date}</p>
+      <h1 style="margin-top: 0.25rem;">{post.data.title}</h1>
+      <Content />
+    </article>
+  </main>
+</MainLayout>

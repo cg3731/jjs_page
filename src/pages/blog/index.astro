@@ -1,0 +1,24 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("blog", ({ data }) => !data.draft);
+const posts = allPosts.sort((a, b) => +new Date(b.data.date) - +new Date(a.data.date));
+---
+<MainLayout title="Blog" current="/blog">
+  <main class="container section reveal">
+    <h2>Blog</h2>
+    <p class="muted">Short research notes, conference memos, and technical reflections.</p>
+    <div class="grid">
+      {posts.map((post) => (
+        <article class="card" style="padding: 1rem;">
+          <a href={`/blog/${post.slug}/`} style="text-decoration:none;">
+            <h3 style="margin:0;">{post.data.title}</h3>
+          </a>
+          <p class="muted" style="margin: 0.35rem 0;">{post.data.date}</p>
+          <p style="margin:0;">{post.data.excerpt}</p>
+        </article>
+      ))}
+    </div>
+  </main>
+</MainLayout>

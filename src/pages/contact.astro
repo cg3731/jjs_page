@@ -1,0 +1,16 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { siteConfig } from "../data/site";
+---
+<MainLayout title="Contact" current="/contact">
+  <main class="container section reveal">
+    <h2>Contact</h2>
+    <div class="card" style="padding:1rem;">
+      <p>Email: <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a></p>
+      <p>Location: {siteConfig.location}</p>
+      <p>Google Scholar: <a href={siteConfig.social.googleScholar}>Profile</a></p>
+      <p>GitHub: <a href={siteConfig.social.github}>Profile</a></p>
+      <p>LinkedIn: <a href={siteConfig.social.linkedin}>Profile</a></p>
+    </div>
+  </main>
+</MainLayout>

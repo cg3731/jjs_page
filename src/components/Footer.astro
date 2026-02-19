@@ -1,0 +1,9 @@
+---
+import { siteConfig } from "../data/site";
+---
+<footer>
+  <div class="container">
+    <div>{siteConfig.name} • {siteConfig.affiliation}</div>
+    <div class="muted">Built with Astro. Last updated: {new Date().toISOString().slice(0, 10)}</div>
+  </div>
+</footer>

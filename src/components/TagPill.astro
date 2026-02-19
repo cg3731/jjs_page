@@ -1,0 +1,30 @@
+---
+const { label } = Astro.props;
+
+const paletteSize = 6;
+const text = String(label ?? "");
+const key = text.trim().toLowerCase();
+
+const tagVariantMap: Record<string, number> = {
+  "human-ai interaction": 1,
+  "human-centered ai": 2,
+  "data science": 3,
+  "data visualization": 4,
+  "llm-augmented tools": 5,
+  "ai ethics": 6,
+  "hci": 1,
+  "human-ai": 2,
+  "prototype": 5,
+  "visualization": 4
+};
+
+let variant = tagVariantMap[key];
+if (!variant) {
+  let hash = 5381;
+  for (let i = 0; i < text.length; i += 1) {
+    hash = ((hash << 5) + hash) + text.charCodeAt(i);
+  }
+  variant = (Math.abs(hash) % paletteSize) + 1;
+}
+---
+<span class={`pill pill-v${variant}`}>{label}</span>

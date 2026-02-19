@@ -1,0 +1,23 @@
+---
+const { current = "/" } = Astro.props;
+const links = [
+  ["/", "Home"],
+  ["/publications", "Publications"],
+  ["/projects", "Projects"],
+  ["/blog", "Blog"],
+  ["/cv", "CV"]
+];
+---
+<header class="site-header">
+  <div class="container">
+    <nav class="main-nav">
+      <strong>Research Portfolio</strong>
+      <div class="links">
+        {links.map(([href, label]) => (
+          <a href={href} class={current === href ? "active" : ""}>{label}</a>
+        ))}
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">Theme</button>
+    </nav>
+  </div>
+</header>

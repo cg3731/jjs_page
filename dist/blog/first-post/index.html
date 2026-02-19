@@ -1,0 +1,26 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Personal academic website"><title>Launching My Academic Website</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="apple-touch-icon" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.6CeN3ZGv.css"></head> <body> <header class="site-header"> <div class="container"> <nav class="main-nav"> <strong>Research Portfolio</strong> <div class="links"> <a href="/" class>Home</a><a href="/publications" class>Publications</a><a href="/projects" class>Projects</a><a href="/blog" class="active">Blog</a><a href="/cv" class>CV</a> </div> <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">Theme</button> </nav> </div> </header>  <main class="container section"> <article class="card" style="padding: 1.4rem;"> <p class="muted">2026-02-18</p> <h1 style="margin-top: 0.25rem;">Launching My Academic Website</h1> <p>This is a starter post.</p>
+<p>You can write short updates about:</p>
+<ul>
+<li>papers in progress</li>
+<li>conference attendance</li>
+<li>prototype demos</li>
+<li>reflections on human-AI interaction</li>
+</ul> </article> </main>  <footer> <div class="container"> <div>Jaeseong Ju • Seoul National University</div> <div class="muted">Built with Astro. Last updated: 2026-02-19</div> </div> </footer> <script>
+      const root = document.documentElement;
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) root.dataset.theme = savedTheme;
+
+      const btn = document.getElementById("themeToggle");
+      btn?.addEventListener("click", () => {
+        const next = root.dataset.theme === "dark" ? "light" : "dark";
+        root.dataset.theme = next;
+        localStorage.setItem("theme", next);
+      });
+
+      const observer = new IntersectionObserver((entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) e.target.classList.add("show");
+        }
+      }, { threshold: 0.14 });
+      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+    </script> </body> </html>
