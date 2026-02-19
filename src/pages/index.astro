@@ -2,6 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import { siteConfig, news, projects, education, experience } from "../data/site";
 import TagPill from "../components/TagPill.astro";
+const base = import.meta.env.BASE_URL;
 ---
 <MainLayout title={siteConfig.name} current="/">
   <main class="container">
@@ -11,7 +12,7 @@ import TagPill from "../components/TagPill.astro";
           <div class="card profile-card reveal">
             <img
               class="profile-image"
-              src="/profile.jpg"
+              src={`${base}profile.jpg`}
               alt={`${siteConfig.name} profile photo`}
             />
           </div>
