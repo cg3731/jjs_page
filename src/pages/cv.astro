@@ -1,19 +1,20 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+const base = import.meta.env.BASE_URL;
 ---
 <MainLayout title="CV" current="/cv">
   <main class="container section reveal">
     <div class="cv-head">
       <h2>Curriculum Vitae</h2>
       <p class="cv-actions">
-        <a href="/docs/Jaeseong_Ju_CV.pdf" target="_blank" rel="noreferrer">Open in New Tab</a>
-        <a href="/docs/Jaeseong_Ju_CV.pdf" download>Download PDF</a>
+        <a href={`${base}docs/Jaeseong_Ju_CV.pdf`} target="_blank" rel="noreferrer">Open in New Tab</a>
+        <a href={`${base}docs/Jaeseong_Ju_CV.pdf`} download>Download PDF</a>
       </p>
     </div>
     <div class="card cv-viewer-wrap">
       <iframe
         class="cv-viewer"
-        src="/docs/Jaeseong_Ju_CV.pdf#view=FitH"
+        src={`${base}docs/Jaeseong_Ju_CV.pdf#view=FitH`}
         title="Jaeseong Ju CV"
       ></iframe>
     </div>

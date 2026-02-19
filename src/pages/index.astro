@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import { siteConfig, news, projects, education, experience } from "../data/site";
 import TagPill from "../components/TagPill.astro";
 const base = import.meta.env.BASE_URL;
+const withBase = (url) => (url?.startsWith("/") ? `${base}${url.slice(1)}` : url);
 ---
 <MainLayout title={siteConfig.name} current="/">
   <main class="container">
@@ -21,10 +22,10 @@ const base = import.meta.env.BASE_URL;
             <h3 style="margin: 0 0 0.65rem;">Contact</h3>
             <p style="margin: 0.2rem 0;">Email: <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a></p>
             <p style="margin: 0.2rem 0;">Location: {siteConfig.location}</p>
-            <p style="margin: 0.2rem 0;"><a href={siteConfig.social.googleScholar}>Google Scholar</a></p>
-            <p style="margin: 0.2rem 0;"><a href={siteConfig.social.github}>GitHub</a></p>
-            <p style="margin: 0.2rem 0;"><a href={siteConfig.social.linkedin}>LinkedIn</a></p>
-            <p style="margin: 0.2rem 0;"><a href={siteConfig.social.cv}>CV (PDF)</a></p>
+            <p style="margin: 0.2rem 0;"><a href={withBase(siteConfig.social.googleScholar)}>Google Scholar</a></p>
+            <p style="margin: 0.2rem 0;"><a href={withBase(siteConfig.social.github)}>GitHub</a></p>
+            <p style="margin: 0.2rem 0;"><a href={withBase(siteConfig.social.linkedin)}>LinkedIn</a></p>
+            <p style="margin: 0.2rem 0;"><a href={withBase(siteConfig.social.cv)}>CV (PDF)</a></p>
           </div>
         </div>
       </aside>
