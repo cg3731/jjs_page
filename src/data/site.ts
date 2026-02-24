@@ -23,6 +23,14 @@ export const siteConfig = {
 export const news = [
   {
     date: "2026-02",
+    text: "1 paper accepted at CHI 2026 Workshop: Understanding and Engaging Critical Resistance to AI in Education! (co-first author)"
+  },
+  {
+    date: "2026-02",
+    text: "1 paper accepted at Visualization Meets AI 2026! (PacificVis 2026 Workshop, Information Visualization journal)"
+  },
+  {
+    date: "2026-02",
     text: "1 paper accepted at IEEE PacificVis(VisNote) 2026! (co-first author)"
   },
   {
