@@ -71,6 +71,27 @@ export const publications = [
     links: {
       arxiv: "https://arxiv.org/abs/2502.14197"
     }
+  },
+  {
+    year: 2026,
+    type: "workshop",
+    title: "InteractiveKG: Transparent and User-Controllable Knowledge Graph Reasoning",
+    venue: "Visualization Meets AI 2026 (PacificVis 2026 Workshop), Information Visualization Journal Special Issue",
+    authors: "M. Kim, Y. Zhao, J. Ju, J. Seo, and H. Park",
+    links: {
+      doi: "ready for DOI"
+    }
+  },
+  {
+    year: 2026,
+    type: "workshop",
+    title: "Learning with AI, Not Just Using AI: A Human-in-the-Loop Curriculum for Critical Literacy",
+    venue: "CHI 2026 Workshop: Understanding and Engaging Critical Resistance to AI in Education",
+    authors: "J. Jang*, J. Ju*, D. Lee*, J. Seo*, and H. Park",
+    note: "*Equal contribution",
+    links: {
+      doi: "ready for DOI"
+    }
   }
 ];
 
