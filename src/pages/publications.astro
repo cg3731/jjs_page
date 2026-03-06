@@ -24,7 +24,7 @@ import { publications } from "../data/site";
           {pub.note && <p class="muted" style="margin: 0 0 0.4rem; font-size: 0.9rem;">{pub.note}</p>}
           <p style="margin: 0;">
             {Object.entries(pub.links).map(([name, url]) => (
-              <a href={url} style="margin-right:0.65rem; text-decoration: underline;">[{name}]</a>
+              <a href={url} target="_blank" rel="noreferrer" style="margin-right:0.65rem; text-decoration: underline;">[{name}]</a>
             ))}
           </p>
         </article>

@@ -48,7 +48,8 @@ export const publications = [
     authors: "J. Ju*, J. Seo*, J. Jang*, D. Lee*, and H. Park",
     note: "*Equal contribution",
     links: {
-      doi: "ready for DOI"
+      doi: "ready for DOI",
+      pdf: "/papers/Pacific_VIS26_final.pdf"
     }
   },
   {
@@ -59,7 +60,8 @@ export const publications = [
     authors: "D. Lee*, J. Ju*, H. Song, and H. Park",
     note: "*Equal contribution",
     links: {
-      doi: "https://doi.org/10.1145/3772318.3791249"
+      doi: "https://doi.org/10.1145/3772318.3791249",
+      pdf: "/papers/CHI_26_final.pdf"
     }
   },
   {
@@ -90,7 +92,8 @@ export const publications = [
     authors: "J. Jang*, J. Ju*, D. Lee*, J. Seo*, and H. Park",
     note: "*Equal contribution",
     links: {
-      doi: "ready for DOI"
+      doi: "ready for DOI",
+      pdf: "/papers/CHI26_edu.pdf"
     }
   }
 ];
