@@ -66,9 +66,9 @@ header.site-header {
 }
 
 nav.main-nav {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
   height: 64px;
 }
 
@@ -76,6 +76,8 @@ nav .links {
   display: flex;
   gap: 0.9rem;
   flex-wrap: wrap;
+  grid-column: 2;
+  justify-content: center;
 }
 
 nav .links a {
@@ -90,6 +92,8 @@ nav .links a.active {
 }
 
 button.theme-toggle {
+  grid-column: 3;
+  justify-self: end;
   border: 1px solid var(--line);
   background: var(--surface);
   color: var(--text);
@@ -274,8 +278,17 @@ footer {
 }
 
 @media (max-width: 720px) {
-  nav.main-nav { height: auto; padding: 0.75rem 0; align-items: flex-start; gap: 0.75rem; }
-  nav .links { gap: 0.6rem; }
+  nav.main-nav {
+    height: auto;
+    padding: 0.75rem 0;
+    grid-template-columns: 1fr auto;
+    row-gap: 0.75rem;
+  }
+  nav .links {
+    grid-column: 1 / -1;
+    gap: 0.6rem;
+    justify-content: center;
+  }
   .home-shell { flex-direction: column; }
   .home-sidebar { width: 100%; flex: 1 1 auto; }
   .home-sidebar { position: static; top: auto; padding-top: 0; }
