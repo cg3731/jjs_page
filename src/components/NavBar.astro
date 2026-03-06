@@ -17,7 +17,6 @@ const withBase = (path) => {
 <header class="site-header">
   <div class="container">
     <nav class="main-nav">
-      <strong>Research Portfolio</strong>
       <div class="links">
         {links.map(([href, label]) => (
           <a href={withBase(href)} class={current === href ? "active" : ""}>{label}</a>
