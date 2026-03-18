@@ -22,6 +22,7 @@ npm run dev
 ## 수정 포인트
 - 기본 프로필: `src/data/site.ts`
 - 메인 디자인: `src/styles/global.css`
+- CV PDF 업로드: 프로젝트 루트의 `Jaeseong_Ju_CV.pdf`만 교체하면 됨
 - 프로필 사진: `public/profile-placeholder.svg`를 `public/profile.jpg` 등으로 교체 후 `src/pages/index.astro`의 `src` 수정
 - 블로그 글: `src/content/blog/*.md`
 - 주요 페이지:
@@ -36,6 +37,11 @@ npm run dev
 2. Repository Settings -> Pages -> Build and deployment: GitHub Actions
 3. `astro.config.mjs`의 `site`를 본인 URL로 수정
 4. custom repo path를 쓰면 `base`를 `/<repo-name>/`으로 변경
+
+## CV 업데이트 방법
+1. `Jaeseong_Ju_CV.pdf`를 프로젝트 루트에 덮어쓴다.
+2. `npm run build` 또는 GitHub Actions 배포 시 자동으로 `public/docs/Jaeseong_Ju_CV.pdf`로 복사된다.
+3. 홈페이지 CV 페이지는 `/docs/Jaeseong_Ju_CV.pdf`를 서빙한다.
 
 ## 글로벌 연구자 네트워킹용 운영 팁
 - 모든 페이지 기본 언어는 영어로 유지하고, 필요 시 한국어 요약을 추가

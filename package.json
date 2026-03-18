@@ -4,8 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
+    "sync:cv": "node scripts/sync-cv.mjs",
+    "dev": "npm run sync:cv && astro dev",
+    "build": "npm run sync:cv && astro build",
     "preview": "astro preview",
     "check": "astro check"
   },
