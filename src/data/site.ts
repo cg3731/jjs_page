@@ -42,7 +42,7 @@ export const news = [
 export const publications = [
   {
     year: 2026,
-    type: "conference",
+    types: ["conference"],
     title: "When Users Don’t Specify: How LLMs Make Design Decisions in Underspecified Data Visualization Contexts",
     venue: "Proceedings of the 2026 IEEE 19th Pacific Visualization Conference (PacificVis 2026)",
     authors: "J. Ju*, J. Seo*, J. Jang*, D. Lee*, and H. Park",
@@ -54,7 +54,7 @@ export const publications = [
   },
   {
     year: 2026,
-    type: "conference",
+    types: ["conference"],
     title: "From Ballpark to Society: Understanding Stakeholders' Adaptation to Automated Judgment via ABS in Baseball",
     venue: "Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems (CHI '26)",
     authors: "D. Lee*, J. Ju*, H. Song, and H. Park",
@@ -65,18 +65,8 @@ export const publications = [
     }
   },
   {
-    year: 2025,
-    type: "preprint",
-    title: "Adaptive sparsified graph learning framework for vessel behavior anomalies",
-    venue: "arXiv preprint arXiv:2502.14197",
-    authors: "J. Kim, M. Kim, J. Ju, Y. Hwang, W. Lee, and H. Park",
-    links: {
-      arxiv: "https://arxiv.org/abs/2502.14197"
-    }
-  },
-  {
     year: 2026,
-    type: "workshop",
+    types: ["workshop", "journal"],
     title: "InteractiveKG: Transparent and User-Controllable Knowledge Graph Reasoning",
     venue: "Visualization Meets AI 2026 (PacificVis 2026 Workshop), Information Visualization Journal Special Issue",
     authors: "M. Kim, Y. Zhao, J. Ju, J. Seo, and H. Park",
@@ -86,7 +76,7 @@ export const publications = [
   },
   {
     year: 2026,
-    type: "workshop",
+    types: ["workshop"],
     title: "Learning with AI, Not Just Using AI: A Human-in-the-Loop Curriculum for Critical Literacy",
     venue: "CHI 2026 Workshop: Understanding and Engaging Critical Resistance to AI in Education",
     authors: "J. Jang*, J. Ju*, D. Lee*, J. Seo*, and H. Park",
@@ -94,6 +84,16 @@ export const publications = [
     links: {
       pdf: "/papers/CHI26_edu.pdf",
       doi: "ready for DOI"
+    }
+  },
+  {
+    year: 2025,
+    types: ["preprint"],
+    title: "Adaptive sparsified graph learning framework for vessel behavior anomalies",
+    venue: "arXiv preprint arXiv:2502.14197",
+    authors: "J. Kim, M. Kim, J. Ju, Y. Hwang, W. Lee, and H. Park",
+    links: {
+      arxiv: "https://arxiv.org/abs/2502.14197"
     }
   }
 ];

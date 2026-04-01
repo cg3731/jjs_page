@@ -215,20 +215,45 @@ button.theme-toggle {
 
 .pub-filter {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1rem;
 }
 .pub-filter button {
   border: 1px solid var(--line);
-  background: var(--surface);
+  background: color-mix(in oklab, var(--surface) 86%, var(--bg));
   border-radius: 999px;
   padding: 0.3rem 0.75rem;
   cursor: pointer;
   color: var(--muted);
+  transition: transform 0.18s ease, border-color 0.18s ease, color 0.18s ease, background-color 0.18s ease;
+}
+.pub-filter button:hover {
+  transform: translateY(-1px);
 }
 .pub-filter button.active {
   color: var(--accent-2);
   border-color: var(--accent-2);
+}
+.pub-filter .filter-all {
+  background: color-mix(in oklab, var(--accent) 12%, var(--surface));
+  border-color: color-mix(in oklab, var(--accent) 28%, var(--line));
+}
+.pub-filter .filter-conference {
+  background: color-mix(in oklab, #2563eb 14%, var(--surface));
+  border-color: color-mix(in oklab, #2563eb 32%, var(--line));
+}
+.pub-filter .filter-journal {
+  background: color-mix(in oklab, #059669 14%, var(--surface));
+  border-color: color-mix(in oklab, #059669 32%, var(--line));
+}
+.pub-filter .filter-workshop {
+  background: color-mix(in oklab, #d97706 14%, var(--surface));
+  border-color: color-mix(in oklab, #d97706 32%, var(--line));
+}
+.pub-filter .filter-preprint {
+  background: color-mix(in oklab, #7c3aed 14%, var(--surface));
+  border-color: color-mix(in oklab, #7c3aed 32%, var(--line));
 }
 .cv-head {
   display: flex;

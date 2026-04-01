@@ -5,19 +5,19 @@ import { publications } from "../data/site";
 <MainLayout title="Publications" current="/publications">
   <main class="container section reveal">
     <h2>Publications</h2>
-    <p class="muted">Filter by publication type. Replace placeholders with your real bibliography.</p>
+    <p class="muted">Filter by publication type.</p>
 
     <div class="pub-filter" id="pubFilter">
-      <button class="active" data-type="all">All</button>
-      <button data-type="conference">Conference</button>
-      <button data-type="journal">Journal</button>
-      <button data-type="preprint">Preprint</button>
-      <button data-type="workshop">Workshop</button>
+      <button class="active filter-all" data-type="all">All</button>
+      <button class="filter-conference" data-type="conference">Conference</button>
+      <button class="filter-journal" data-type="journal">Journal</button>
+      <button class="filter-workshop" data-type="workshop">Workshop</button>
+      <button class="filter-preprint" data-type="preprint">Preprint</button>
     </div>
 
     <div class="grid" id="pubList">
       {publications.map((pub) => (
-        <article class="card pub-item" data-type={pub.type} style="padding: 1rem;">
+        <article class="card pub-item" data-types={pub.types.join(" ")} style="padding: 1rem;">
           <strong>{pub.year} • {pub.venue}</strong>
           <h3 style="margin: 0.4rem 0;">{pub.title}</h3>
           <p class="muted" style="margin: 0 0 0.4rem;">{pub.authors}</p>
@@ -42,7 +42,8 @@ import { publications } from "../data/site";
       wrap.querySelectorAll("button").forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
       items.forEach((item) => {
-        item.style.display = type === "all" || item.dataset.type === type ? "block" : "none";
+        const itemTypes = (item.dataset.types || "").split(" ").filter(Boolean);
+        item.style.display = type === "all" || itemTypes.includes(type) ? "block" : "none";
       });
     });
   </script>
