@@ -314,6 +314,7 @@ footer {
     gap: 0.6rem;
     justify-content: center;
   }
+  .profile-card { display: none; }
   .home-shell { flex-direction: column; }
   .home-sidebar { width: 100%; flex: 1 1 auto; }
   .home-sidebar { position: static; top: auto; padding-top: 0; }
