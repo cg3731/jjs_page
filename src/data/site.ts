@@ -26,11 +26,11 @@ export const news = [
     text: "Our paper, “Great grave: Modeling versioned context units for longitudinal LLM interaction,” has been published in the proceedings of UIST 2026!"
   },
   {
-    date: "2026-04-20–23",
+    date: "2026-04",
     text: "Visited PacificVis 2026 (April 20–23)."
   },
   {
-    date: "2026-04-13–17",
+    date: "2026-04",
     text: "Visited CHI 2026 (April 13–17)."
   }
 ];
