@@ -22,24 +22,30 @@ export const siteConfig = {
 
 export const news = [
   {
-    date: "2026-02",
-    text: "1 paper accepted at CHI 2026 Workshop: Understanding and Engaging Critical Resistance to AI in Education! (co-first author)"
+    date: "2026-11",
+    text: "Our paper, “Great grave: Modeling versioned context units for longitudinal LLM interaction,” has been published in the proceedings of UIST 2026!"
   },
   {
-    date: "2026-02",
-    text: "1 paper accepted at Visualization Meets AI 2026! (PacificVis 2026 Workshop, Information Visualization journal)"
+    date: "2026-04-20–23",
+    text: "Visited PacificVis 2026 (April 20–23)."
   },
   {
-    date: "2026-02",
-    text: "1 paper accepted at IEEE PacificVis(VisNote) 2026! (co-first author)"
-  },
-  {
-    date: "2026-01",
-    text: "1 paper accepted at CHI 2026! (co-first author)"
+    date: "2026-04-13–17",
+    text: "Visited CHI 2026 (April 13–17)."
   }
 ];
 
 export const publications = [
+  {
+    year: 2026,
+    types: ["conference"],
+    title: "Great grave: Modeling versioned context units for longitudinal LLM interaction",
+    venue: "Proceedings of the 39th Annual ACM Symposium on User Interface Software and Technology (UIST '26)",
+    authors: "J. Jang, J. Seo, J. Ju, and H. Park",
+    links: {
+      doi: "https://doi.org/10.1145/3830398.3830503"
+    }
+  },
   {
     year: 2026,
     types: ["conference"],
